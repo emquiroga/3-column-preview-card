@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "abelregular";
+  src: url("fonts/abel-regular-webfont.woff2") format("woff2"),
+    url("fonts/abel-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto_condensedregular";
+  src: url("fonts/robotocondensed-regular-webfont.woff2") format("woff2"),
+    url("fonts/robotocondensed-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --text-primary: hsla(0, 0%, 100%, 0.75);
+  --text-secondary: hsla(0, 0%, 95%, 1);
+  --bg-primary: hsla(31, 77%, 52%, 1);
+  --bg-secondary: hsla(184, 100%, 22%, 1);
+  --bg-tertiary: hsla(179, 100%, 13%, 1);
+  font-size: 16px;
+  font-family: sans-serif, serif;
+  --font-primary: "roboto_condensedregular";
+  --font-secondary: "abelregular";
+  --transition-primary: all 0.2s ease 0s;
+}
+* {
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+section {
+  border: 1px solid black;
+  margin: 0;
+  padding: 2rem;
+  min-height: 60vh;
+  max-height: 80vh;
+  min-width: 200px;
+  max-width: 375px;
+  border-radius: 1rem;
+}
+section:nth-of-type(1) {
+  background-color: var(--bg-primary);
+}
+section:nth-of-type(2) {
+  background-color: var(--bg-secondary);
+}
+section:nth-of-type(3) {
+  background-color: var(--bg-tertiary);
+}
+h1 {
+  font-size: 3rem;
+  font-family: var(--font-secondary);
+  color: var(--text-secondary);
+  font-weight: bolder;
+  text-shadow: 1px 1px 3px black;
+}
+h1:nth-of-type(2) {
+  color: var(--text-primary);
+}
+p {
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+}
+.button {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-family: var(--font-secondary);
+  color: var(--text-primary);
+  padding: 0.7rem 2rem;
+  border: 2px solid var(--text-secondary);
+  border-radius: 2.5rem;
+  text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.7);
+}
+.button:hover {
+  font-weight: bolder;
+  transition: var(--transition-primary);
+  text-shadow: none;
+}
+#button1:hover {
+  color: var(--bg-primary);
+  background-color: var(--text-secondary);
+}
+#button2:hover {
+  color: var(--bg-secondary);
+  background-color: var(--text-secondary);
+}
+#button3:hover {
+  color: var(--bg-tertiary);
+  background-color: var(--text-secondary);
+}
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-primary);
+  text-align: center;
+  color: var(--text-primary);
+  padding: 0.7rem;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+  }
+}
