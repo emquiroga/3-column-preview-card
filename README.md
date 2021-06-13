@@ -17,7 +17,8 @@ Users should be able to:
 
 ### Links
 
-https://emquiroga.github.io/3-column-preview-card/
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -29,8 +30,6 @@ https://emquiroga.github.io/3-column-preview-card/
 - Mobile-first workflow
 
 ### What I learned
-
-:nth uses, mobile first, flexbox
 
 ### Continued development
 
