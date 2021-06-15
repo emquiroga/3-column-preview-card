@@ -11,14 +11,15 @@ Users should be able to:
 
 ### Screenshot
 
--https://ibb.co/gZWVXcy
+https://ibb.co/7pbzzy4
 
--https://ibb.co/P9tRYD6
+https://ibb.co/jhbDJcs
+
+https://ibb.co/vx94k7x
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+https://emquiroga.github.io/3-column-preview-card/
 
 ## My process
 
@@ -30,6 +31,8 @@ Users should be able to:
 - Mobile-first workflow
 
 ### What I learned
+
+- How to research sizes and properties with Adobe XD and translate them into code.
 
 ### Continued development
 

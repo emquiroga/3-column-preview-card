@@ -1,119 +1,113 @@
-@font-face {
-  font-family: "abelregular";
-  src: url("fonts/abel-regular-webfont.woff2") format("woff2"),
-    url("fonts/abel-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "roboto_condensedregular";
-  src: url("fonts/robotocondensed-regular-webfont.woff2") format("woff2"),
-    url("fonts/robotocondensed-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap");
 :root {
+  --primary: hsl(31, 77%, 52%);
+  --secondary: hsl(184, 100%, 22%);
+  --tertiary: hsl(179, 100%, 13%);
   --text-primary: hsla(0, 0%, 100%, 0.75);
-  --text-secondary: hsla(0, 0%, 95%, 1);
-  --bg-primary: hsla(31, 77%, 52%, 1);
-  --bg-secondary: hsla(184, 100%, 22%, 1);
-  --bg-tertiary: hsla(179, 100%, 13%, 1);
-  font-size: 16px;
-  font-family: sans-serif, serif;
-  --font-primary: "roboto_condensedregular";
-  --font-secondary: "abelregular";
-  --transition-primary: all 0.2s ease 0s;
+  --text-secondary: hsl(0, 0%, 95%);
 }
-* {
+html {
+  font-size: 100%;
   box-sizing: border-box;
 }
-.wrapper {
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+.container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 10px;
+  align-items: center; /*This centers the wrapper*/
+  padding: 1.25rem;
 }
-section {
-  border: 1px solid black;
-  margin: 0;
-  padding: 2rem;
-  min-height: 500px;
-  max-height: 800px;
-  min-width: 200px;
-  max-width: 375px;
-  border-radius: 1rem;
+
+.wrapper {
+  border-radius: 10px;
+  border: 1px solid var(--text-primary);
+  overflow: hidden;
 }
-section:nth-of-type(1) {
-  background-color: var(--bg-primary);
+.card {
+  width: 20.4375rem;
+  height: 27.625rem;
 }
-section:nth-of-type(2) {
-  background-color: var(--bg-secondary);
+.card:nth-child(1) {
+  background-color: var(--primary);
 }
-section:nth-of-type(3) {
-  background-color: var(--bg-tertiary);
+.card:nth-child(2) {
+  background-color: var(--secondary);
+}
+.card:last-child {
+  background-color: var(--tertiary);
+}
+.card-content {
+  padding-left: 3.125rem;
+  padding-right: 3rem;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.logo {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 h1 {
-  font-size: 3rem;
-  font-family: var(--font-secondary);
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 1.5rem;
   color: var(--text-secondary);
-  font-weight: bolder;
-  text-shadow: 1px 1px 3px black;
-  padding: 0;
-  margin: 0;
 }
-h1:nth-of-type(2) {
-  color: var(--text-primary);
-}
-p {
-  font-size: 1.5rem;
-  padding: 1rem;
-  font-family: var(--font-primary);
+.description {
+  margin-top: 2.5rem;
+  margin-bottom: 1.625rem;
+  line-height: 1.5rem;
+  width: 14.375rem;
   color: var(--text-primary);
 }
 .button {
   text-decoration: none;
-  font-size: 1.3rem;
-  font-family: var(--font-secondary);
-  color: var(--text-primary);
-  padding: 0.7rem 2rem;
+  background-color: var(--text-secondary);
+  display: inline-block;
+  font-size: inherit;
+  padding: 0.8rem 2rem;
   border: 2px solid var(--text-secondary);
-  border-radius: 2.5rem;
-  text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.7);
+  border-radius: 2rem;
+}
+#button1 {
+  color: var(--primary);
+}
+#button2 {
+  color: var(--secondary);
+}
+#button3 {
+  color: var(--tertiary);
 }
 .button:hover {
-  font-weight: bolder;
-  transition: var(--transition-primary);
-  text-shadow: none;
-}
-#button1:hover {
-  color: var(--bg-primary);
-  background-color: var(--text-secondary);
-}
-#button2:hover {
-  color: var(--bg-secondary);
-  background-color: var(--text-secondary);
-}
-#button3:hover {
-  color: var(--bg-tertiary);
-  background-color: var(--text-secondary);
-}
-.attribution {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--bg-primary);
-  text-align: center;
-  color: var(--text-primary);
-  padding: 0.7rem;
-  margin: 0;
+  color: var(--text-secondary) !important;
+  background-color: inherit;
+  transition: 200ms ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .wrapper {
     display: flex;
     flex-flow: row wrap;
-    height: 100vh;
+  }
+  .card {
+    width: 19.1875rem;
+    height: 31.25rem;
+  }
+  .container {
+    margin-top: 10rem;
+  }
+  .description {
+    margin-bottom: 5.5rem;
+    width: 100%;
   }
 }
